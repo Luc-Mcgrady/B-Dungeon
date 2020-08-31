@@ -34,10 +34,11 @@
     <script>scripts\turn_towards.gml</script>
     <script>scripts\LOS_instance_closest.gml</script>
     <script>scripts\room_paths.gml</script>
-    <script>scripts\change_text.gml</script>
+    <script>scripts\tutorial_change_text.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_hints</font>
+    <font>fonts\font_lives</font>
   </fonts>
   <objects name="objects">
     <object>objects\o_player</object>
@@ -49,14 +50,17 @@
     <object>objects\o_enemy_rifle</object>
     <object>objects\o_btn_restart</object>
     <object>objects\o_gate</object>
-    <objects name="game">
+    <objects name="logic">
       <object>objects\game_controller</object>
       <object>objects\game_spawner</object>
       <object>objects\game_tutorial</object>
+      <object>objects\game_hint</object>
+      <object>objects\game_persistant</object>
     </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\til_tutorial</timeline>
+    <timeline>timelines\til_room_break</timeline>
   </timelines>
   <rooms name="rooms">
     <room>rooms\r_tutorial</room>

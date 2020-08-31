@@ -25,28 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Wave handling
-reload = room_speed * 2
-failed = false
+            <string>text = ""
+target_text = ""
+timer = 0
 
-wave = 0
-to_create = 0
-to_create_rifle = 0
-paused = false
-
-switch room {
-case r_test_room:
-    to_create_wave[0] = 1
-    to_create_rifle_wave[0] = 0
-    
-    to_create_wave[1] = 5
-    to_create_rifle_wave[1] = 2
-    break
-default:
-    to_create_wave[0] = 0
-    to_create_rifle_wave[0] = 0
-    break
-}
+scroll_time = 0
+scroll_speed = 3
 </string>
           </argument>
         </arguments>
@@ -69,82 +53,19 @@ default:
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Enemy spawning
-
-if instance_number(o_enemy) == 0 and instance_number(o_enemy_rifle) == 0 {
-    if wave &lt; array_length_1d(to_create_wave) and reload == 0 {
-        to_create = to_create_wave[wave]
-        to_create_rifle = to_create_rifle_wave[wave]
-        wave++
-    }
-
-    if wave == array_length_1d(to_create_wave) and to_create == 0 and to_create_rifle == 0 //Win condition
-        with (o_gate)
-            instance_destroy(self)
+            <string>if string_length(target_text) and scroll_time &lt;= 0 {
+    text += string_char_at(target_text,0)
+    target_text = string_copy(target_text,2,string_length(target_text));
+    scroll_time = scroll_speed
 }
 
-if reload == 0 {
-    if to_create_rifle &gt; 0 {
-        instance_create(0,0,o_enemy_rifle)
-        to_create_rifle--
-    }
-    else if to_create &gt; 0 {
-        instance_create(0,0,o_enemy)
-        to_create--
-    }
-    reload = room_speed / 2
-}
-
-if not paused
-    reload = absdec(reload,global.timespeed)
+scroll_time -= 1
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>failed</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>422</id>
-        <kind>1</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -161,33 +82,55 @@ if not paused
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_red)
-draw_set_alpha(0.4)
-draw_rectangle(0,0,room_width,room_height,false)
-
-draw_set_alpha(1)
-instance_create(room_width/2,room_height/2,o_btn_restart)
-draw_sprite(s_btn_restart,0,room_width/2,room_height/2)
+            <string>draw_set_alpha(1)
 </string>
           </argument>
         </arguments>
       </action>
       <action>
         <libid>1</libid>
-        <id>424</id>
-        <kind>2</kind>
+        <id>524</id>
+        <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
-        <exetype>0</exetype>
-        <functionname></functionname>
+        <exetype>1</exetype>
+        <functionname>action_color</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>13</kind>
+            <string>16777215</string>
+          </argument>
+        </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>526</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_font</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>12</kind>
+            <font>font_hints</font>
+          </argument>
+          <argument>
+            <kind>4</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
       <action>
         <libid>1</libid>
         <id>613</id>
@@ -204,15 +147,15 @@ draw_sprite(s_btn_restart,0,room_width/2,room_height/2)
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>"Lives: "+ string(lives)</string>
+            <string>text</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>room_width/2</string>
           </argument>
           <argument>
             <kind>0</kind>
-            <string>0</string>
+            <string>room_height/2</string>
           </argument>
         </arguments>
       </action>

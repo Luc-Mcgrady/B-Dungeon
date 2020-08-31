@@ -19,7 +19,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -64,7 +64,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -105,7 +105,7 @@
           <argument>
             <kind>1</kind>
             <string>if instance_find(o_player,0).driven {
-    change_text("Sorry i slowed you down#I didnt realise you were a VIP")
+    tutorial_change_text("Sorry i slowed you down#I didnt realise you were a VIP")
     instance_destroy(instance_find(o_gate,0))
     timeline_running = false
 }
@@ -134,7 +134,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -217,7 +217,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -282,7 +282,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -327,7 +327,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -410,7 +410,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -455,7 +455,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -500,7 +500,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -583,7 +583,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -628,7 +628,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -711,7 +711,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -756,7 +756,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -801,7 +801,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -846,7 +846,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -891,7 +891,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -950,7 +950,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -995,7 +995,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1040,7 +1040,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
@@ -1085,7 +1085,7 @@
         <arguments>
           <argument>
             <kind>9</kind>
-            <script>change_text</script>
+            <script>tutorial_change_text</script>
           </argument>
           <argument>
             <kind>0</kind>
