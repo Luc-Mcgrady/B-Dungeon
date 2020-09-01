@@ -33,7 +33,7 @@
     <script>scripts\action_shoot.gml</script>
     <script>scripts\turn_towards.gml</script>
     <script>scripts\LOS_instance_closest.gml</script>
-    <script>scripts\room_paths.gml</script>
+    <script>scripts\random_room_path.gml</script>
     <script>scripts\tutorial_change_text.gml</script>
   </scripts>
   <fonts name="fonts">
@@ -64,6 +64,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\r_tutorial</room>
+    <room>rooms\r_1_hallway</room>
     <room>rooms\r_test_room</room>
   </rooms>
   <help>

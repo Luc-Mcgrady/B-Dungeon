@@ -30,16 +30,7 @@ image_blend = make_colour_rgb(225, 53, 30)
 
 // Pathing
 
-var paths = room_paths()
-
-if (paths != noone) {
-    path = paths[irandom(array_length_1d(paths)-1)]
-
-    path_start(path,3,path_action_reverse,true)
-    path_direction = 1
-    
-    image_angle = point_direction(x,y,path_get_x(path,0.05),path_get_y(path,0.05))
-}
+path = random_room_path()
 
 // Variable initialisation
 reload = 0
@@ -86,7 +77,8 @@ image_angle = turn_towards(image_angle,target_angle, global.timespeed*15)
 
 // Movement
 
-path_speed = global.timespeed * 7 * path_direction
+if path != noone
+    path_speed = global.timespeed * 7 * path_direction
 
 // Reloading
 
