@@ -51,16 +51,18 @@
     <view visible="0" objName="" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="o_player" x="192" y="512" name="inst_9F0193C1" locked="0" code="driven = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_player" x="192" y="256" name="inst_B8A78552" locked="0" code="driven = true&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="o_wall" x="512" y="64" name="inst_D6A1FACC" locked="0" code="" scaleX="34" scaleY="7.22580623626709" colour="4294967295" rotation="0"/>
-    <instance objName="o_wall" x="704" y="384" name="inst_B7BC7A6F" locked="0" code="" scaleX="2.25" scaleY="5.75" colour="4294967295" rotation="0"/>
-    <instance objName="o_enemy" x="864" y="384" name="inst_BB3570E1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_player" x="96" y="416" name="inst_9F0193C1" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_player" x="96" y="352" name="inst_B8A78552" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_wall" x="512" y="64" name="inst_D6A1FACC" locked="0" code="" scaleX="36.5625" scaleY="7.22580623626709" colour="4294967295" rotation="0"/>
+    <instance objName="o_wall" x="576" y="352" name="inst_B7BC7A6F" locked="0" code="" scaleX="2.25" scaleY="5.75" colour="4294967295" rotation="0"/>
     <instance objName="o_gate" x="992" y="384" name="inst_EF1E5BF4" locked="0" code="" scaleX="3.87096762657166" scaleY="13.1612901687622" colour="4294967295" rotation="0"/>
     <instance objName="game_controller" x="32" y="224" name="inst_4600A654" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="game_spawner" x="96" y="224" name="inst_74793274" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_gate" x="0" y="384" name="inst_0EE05ACD" locked="0" code="" scaleX="1.5" scaleY="15.5" colour="4294967295" rotation="0"/>
-    <instance objName="o_wall" x="512" y="672" name="inst_5218DA12" locked="0" code="" scaleX="34" scaleY="5.9375" colour="4294967295" rotation="0"/>
+    <instance objName="o_wall" x="576" y="512" name="inst_8AAA7589" locked="0" code="" scaleX="2.25" scaleY="5.75" colour="4294967295" rotation="0"/>
+    <instance objName="o_wall" x="512" y="672" name="inst_8A0ADA5D" locked="0" code="" scaleX="37.0967750549316" scaleY="5.9375" colour="4294967295" rotation="0"/>
+    <instance objName="o_wall" x="576" y="384" name="inst_C2F29513" locked="0" code="" scaleX="5.5" scaleY="-4.5" colour="4294967295" rotation="0"/>
+    <instance objName="o_enemy_rifle" x="672" y="544" name="inst_4227962A" locked="0" code="image_angle = 90&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

@@ -11,6 +11,7 @@ case r_test_room:
     paths[3] = room_1_route_4
     break
 default:
+    path_direction = 0
     return noone
     break
 }

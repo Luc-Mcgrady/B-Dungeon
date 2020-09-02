@@ -55,7 +55,7 @@ reload_times[2] = 4 * room_speed
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>self</whoName>
+        <whoName>other</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
@@ -69,11 +69,19 @@ var target = LOS_instance_closest(o_player,false)
 
 // Turning
 
+// TODO this if statement needs simplifying at some point
+
+var turn_speed = 15
+
 if target == noone and reload_pos == 0{ // If reload_pos is greater than 0 it means we are shooting
-    target_angle = direction
+    if path != noone
+        target_angle = direction
+    else
+        target_angle = image_angle
 } else if reload_pos == 0 {
     target_angle = point_direction(x,y,target.x,target.y)
-}
+} else 
+    turn_speed = 5
 
 // Shooting
 if ((target != noone or reload_pos &gt; 0) and abs(image_angle-target_angle) &lt; 3 and reload == 0){
@@ -85,7 +93,7 @@ if ((target != noone or reload_pos &gt; 0) and abs(image_angle-target_angle) &lt
     
 }
 
-image_angle = turn_towards(image_angle,target_angle, global.timespeed*15)
+image_angle = turn_towards(image_angle,target_angle, global.timespeed*turn_speed)
 
 // Movement
 

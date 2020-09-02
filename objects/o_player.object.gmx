@@ -75,6 +75,8 @@ if remaining == 2 {
         with (spawner) 
             failed = true
 }
+
+lives--
 </string>
           </argument>
         </arguments>
@@ -128,8 +130,8 @@ if driven {
     // Aim + shoot
     
     image_angle = turn_towards(image_angle, point_direction(x,y,mouse_x,mouse_y), global.timespeed * 15)
-    
-    if mouse_check_button(1) and reloaded == 0
+
+    if mouse_check_button_pressed(1) and reloaded == 0
         //and not (place_meeting(mouse_x,mouse_y,o_player) and global.slowtime)
         {
         reloaded = reload_time

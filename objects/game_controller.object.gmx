@@ -33,6 +33,7 @@ global.slowtime = false
 global.timespeed = 15 / room_speed 
 global.start_room_speed = room_speed
 global.hint = instance_create(0,0,game_hint)
+lives = 0
 
 // Variable initialisation
 

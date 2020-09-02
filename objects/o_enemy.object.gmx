@@ -63,7 +63,10 @@ var target = LOS_instance_closest(o_player,false)
 // Turning
 
 if target == noone{
-    target_angle = direction
+    if path != noone
+        target_angle = direction
+    else
+        target_angle = image_angle
 } else {
     target_angle = point_direction(x,y,target.x,target.y)
     // Shooting
