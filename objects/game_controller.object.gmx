@@ -43,10 +43,10 @@ slow_room_speed = room_speed / 5
 
 if instance_number(game_hint) == 0
     global.hint = instance_create(0,0,game_hint)
-if instance_number(game_music) == 0 {
+if instance_number(game_music) == 0 
     global.music = instance_create(0,0,game_music)
-    show_debug_message("Music spawner created")
-}
+if instance_number(game_persistant) == 0 
+    global.persistant = instance_create(0,0,game_persistant)
 
 // Settings
 
@@ -91,22 +91,6 @@ if keyboard_check_pressed(vk_space) {
         </arguments>
       </action>
     </event>
-    <event eventtype="5" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
     <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
@@ -128,6 +112,44 @@ if keyboard_check_pressed(vk_space) {
 </string>
           </argument>
         </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="82">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if room != r_tutorial
+    global.persistant.deaths++
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>223</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_current_room</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
     </event>
   </events>

@@ -68,7 +68,7 @@ if remaining == 2 {
     }
 } else if remaining == 1 {
     var spawner = instance_find(game_spawner,0)    
-
+    
     if spawner != noone
         with (spawner) 
             failed = true
@@ -371,6 +371,7 @@ if mouse_check_button_pressed(2) {
         draw_set_colour(c_yellow) // Inner circle
         draw_set_alpha(0.5)
         draw_circle(x,y,radius,false)
+        draw_set_alpha(1)
     }   
     
     
