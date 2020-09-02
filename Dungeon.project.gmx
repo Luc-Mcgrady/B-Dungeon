@@ -4,7 +4,10 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_Higher_Octane</sound>
+    <sound>sound\snd_No_7_AloneWMT</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_colour_white</sprite>
     <sprite>sprites\s_colour_gold</sprite>
@@ -58,6 +61,7 @@
       <object>objects\game_tutorial</object>
       <object>objects\game_hint</object>
       <object>objects\game_persistant</object>
+      <object>objects\game_music</object>
     </objects>
   </objects>
   <timelines name="timelines">

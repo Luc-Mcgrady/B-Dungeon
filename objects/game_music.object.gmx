@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>-1</visible>
   <depth>0</depth>
-  <persistent>0</persistent>
+  <persistent>-1</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,32 +25,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>random_set_seed(current_time)
+            <string>post_game = false
 
-// Globals
-
-global.slowtime = false
-global.timespeed = 15 / room_speed 
-global.start_room_speed = room_speed
-
-lives = 0
-
-// Variable initialisation
-
-slow_room_speed = room_speed / 5
-
-// Game logic spawning
-
-if instance_number(game_hint) == 0
-    global.hint = instance_create(0,0,game_hint)
-if instance_number(game_music) == 0 {
-    global.music = instance_create(0,0,game_music)
-    show_debug_message("Music spawner created")
-}
-
-// Settings
-
-paused = false
+audio_play_sound(snd_No_7_AloneWMT,0,true)
+audio_play_sound(snd_Higher_Octane,0,true)
+audio_pause_sound(snd_Higher_Octane)
 </string>
           </argument>
         </arguments>
@@ -73,58 +52,21 @@ paused = false
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Slowmotion
-if keyboard_check_pressed(vk_space) {
-    global.slowtime = !global.slowtime
+            <string>if !post_game and instance_number(o_gate) == 0 {
+
+    post_game = true
+    audio_pause_sound(snd_Higher_Octane)
+    audio_resume_sound(snd_No_7_AloneWMT)
     
-    if global.slowtime {
-        global.timespeed = 5 / room_speed
-    }
-    else {
-        global.timespeed = 15 / room_speed
-    }
+} else if post_game and instance_number(o_gate) &gt; 0 {
+
+    post_game = false
+    audio_pause_sound(snd_No_7_AloneWMT)
+    audio_resume_sound(snd_Higher_Octane)
+
 }
 
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="82">
-      <action>
-        <libid>1</libid>
-        <id>223</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_current_room</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="7" enumb="4">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>lives = instance_number(o_player)
 </string>
           </argument>
         </arguments>
