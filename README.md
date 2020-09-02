@@ -14,7 +14,7 @@ collectibles- score, health, power up, key to unlock a goal
 
 menu page 
 
-Win and lose pages
+Win and lose pages ✔️
 
 help page ✔️ (i did a tutorial)
 

@@ -25,18 +25,16 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// Enviroment constants
+            <string>// Enviroment variables
 image_blend = make_colour_rgb(30, 203, 225)
-
-// Unchangable constants
-
 
 // Customisation constants
 
+reload_time = (3/4) * room_speed // Time in seconds
 
 // Variable initialisation
 reloaded = 0
-reload_time = (3/4) * room_speed // Time in seconds
+
 driven = false
 
 xlastfree = x
