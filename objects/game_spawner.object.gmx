@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>// Wave handling
 reload = room_speed * 2
+reload_time = room_speed / 2
 failed = false
 
 wave = 0
@@ -40,13 +41,20 @@ case r_test_room:
     to_create_rifle_wave[0] = 0
     
     to_create_wave[1] = 3
-    to_create_rifle_wave[1] = 0
+    to_create_rifle_wave[1] = 1
     
-    to_create_wave[2] = 3
-    to_create_rifle_wave[2] = 2
+    //to_create_wave[2] = 3
+    //to_create_rifle_wave[2] = 2
+    
+    //to_create_wave[3] = 0
+    //to_create_rifle_wave[3] = 5
+    
+    to_create_wave[2] = 0
+    to_create_rifle_wave[2] = 3 
     
     to_create_wave[3] = 0
-    to_create_rifle_wave[3] = 5
+    to_create_rifle_wave[3] = 0 // Fake wave to tell the doors to open
+    //Even if there are quantities in the last wave they still wont spawn
     break
 default:
     to_create_wave[0] = 0
@@ -78,17 +86,13 @@ default:
             <kind>1</kind>
             <string>// Enemy spawning
 
-if instance_number(o_enemy) == 0 and instance_number(o_enemy_rifle) == 0 {
-    if wave &lt; array_length_1d(to_create_wave) and reload == 0 {
-        to_create = to_create_wave[wave]
-        to_create_rifle = to_create_rifle_wave[wave]
-        wave++
-    }
+//if instance_number(o_enemy) == 0 and instance_number(o_enemy_rifle) == 0 {
+//    if wave &lt; array_length_1d(to_create_wave) and reload == 0 {
 
-    if wave == array_length_1d(to_create_wave) and to_create == 0 and to_create_rifle == 0 //Win condition
-        with (o_gate)
-            instance_destroy(self)
-}
+//    }
+
+
+//}
 
 if reload == 0 {
     if to_create_rifle &gt; 0 {
@@ -98,8 +102,10 @@ if reload == 0 {
     else if to_create &gt; 0 {
         instance_create(0,0,o_enemy)
         to_create--
+    } else if enemy_number() == 0 {
+        victory_check()
     }
-    reload = room_speed / 2
+    reload = reload_time
 }
 
 if not paused
