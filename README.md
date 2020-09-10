@@ -12,7 +12,7 @@ health and score points for the main character (this must be drawn on the levels
 
 collectibles- score, health, power up, key to unlock a goal
 
-menu page 
+menu page ✔️
 
 Win and lose pages ✔️
 

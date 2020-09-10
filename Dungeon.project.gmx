@@ -19,7 +19,10 @@
       <sprite>sprites\s_player_rifle_top</sprite>
       <sprite>sprites\s_player_dead</sprite>
     </sprites>
-    <sprite>sprites\s_btn_restart</sprite>
+    <sprites name="Buttons">
+      <sprite>sprites\s_btn_restart</sprite>
+      <sprite>sprites\s_btn_play</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_victory</background>
@@ -61,7 +64,6 @@
     <object>objects\o_corpse</object>
     <object>objects\o_enemy</object>
     <object>objects\o_enemy_rifle</object>
-    <object>objects\o_btn_restart</object>
     <object>objects\o_gate</object>
     <objects name="logic">
       <object>objects\game_controller</object>
@@ -70,6 +72,12 @@
       <object>objects\game_hint</object>
       <object>objects\game_persistant</object>
       <object>objects\game_music</object>
+      <object>objects\game_menu</object>
+    </objects>
+    <objects name="button">
+      <object>objects\o_btn_play</object>
+      <object>objects\o_btn_restart</object>
+      <object>objects\o_btn_restart_full</object>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -77,16 +85,17 @@
     <timeline>timelines\til_room_break</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\r_2_chokepoint</room>
-    <room>rooms\r_victory</room>
+    <room>rooms\r_menu</room>
     <room>rooms\r_tutorial</room>
     <room>rooms\r_1_hallway</room>
+    <room>rooms\r_2_chokepoint</room>
     <room>rooms\r_3_rifle</room>
     <room>rooms\r_4_alert</room>
     <room>rooms\r_5_tandem</room>
     <room>rooms\r_6_message</room>
     <room>rooms\r_7_test</room>
     <room>rooms\r_8_escape</room>
+    <room>rooms\r_victory</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
