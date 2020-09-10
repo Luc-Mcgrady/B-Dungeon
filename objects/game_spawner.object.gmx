@@ -36,18 +36,13 @@ to_create_rifle = 0
 paused = false
 
 switch room {
-case r_test_room:
+case r_7_test:
     to_create_wave[0] = 1
     to_create_rifle_wave[0] = 0
     
     to_create_wave[1] = 3
     to_create_rifle_wave[1] = 1
     
-    //to_create_wave[2] = 3
-    //to_create_rifle_wave[2] = 2
-    
-    //to_create_wave[3] = 0
-    //to_create_rifle_wave[3] = 5
     
     to_create_wave[2] = 0
     to_create_rifle_wave[2] = 3 
@@ -55,6 +50,21 @@ case r_test_room:
     to_create_wave[3] = 0
     to_create_rifle_wave[3] = 0 // Fake wave to tell the doors to open
     //Even if there are quantities in the last wave they still wont spawn
+    break
+    
+case r_8_escape:
+    to_create_wave[0] = 3
+    to_create_rifle_wave[0] = 0
+    
+    to_create_wave[1] = 2
+    to_create_rifle_wave[1] = 2
+    
+    to_create_wave[2] = 0
+    to_create_rifle_wave[2] = 5
+    
+    to_create_wave[3] = 0
+    to_create_rifle_wave[3] = 0
+    reload_time *= 3/2
     break
 default:
     to_create_wave[0] = 0

@@ -4,11 +4,17 @@ var path
 // Get a list of possible room paths
 
 switch room {
-case r_test_room:
-    paths[0] = room_1_route_1
-    paths[1] = room_1_route_2
-    paths[2] = room_1_route_3
-    paths[3] = room_1_route_4
+case r_7_test:
+    paths[0] = p_7_test_1
+    paths[1] = p_7_test_2
+    paths[2] = p_7_test_3
+    paths[3] = p_7_test_4
+    break
+case r_8_escape:
+    paths[0] = p_8_escape_1
+    paths[1] = p_8_escape_2
+    paths[2] = p_8_escape_3
+    paths[3] = p_8_escape_4
     break
 default:
     path_direction = 0

@@ -45,7 +45,7 @@ if instance_number(game_hint) == 0
     global.hint = instance_create(0,0,game_hint)
 if instance_number(game_music) == 0 
     global.music = instance_create(0,0,game_music)
-if instance_number(game_persistant) == 0 
+if instance_number(game_persistant) == 0 and room != r_tutorial
     global.persistant = instance_create(0,0,game_persistant)
 
 // Settings

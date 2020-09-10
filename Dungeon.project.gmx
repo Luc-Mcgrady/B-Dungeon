@@ -25,11 +25,17 @@
     <background>background\bg_victory</background>
   </backgrounds>
   <paths name="paths">
-    <paths name="r_test_room">
-      <path>paths\room_1_route_1</path>
-      <path>paths\room_1_route_2</path>
-      <path>paths\room_1_route_3</path>
-      <path>paths\room_1_route_4</path>
+    <paths name="r_7_test">
+      <path>paths\p_7_test_1</path>
+      <path>paths\p_7_test_2</path>
+      <path>paths\p_7_test_3</path>
+      <path>paths\p_7_test_4</path>
+    </paths>
+    <paths name="r_8_escape">
+      <path>paths\p_8_escape_1</path>
+      <path>paths\p_8_escape_2</path>
+      <path>paths\p_8_escape_3</path>
+      <path>paths\p_8_escape_4</path>
     </paths>
   </paths>
   <scripts name="scripts">
@@ -71,7 +77,6 @@
     <timeline>timelines\til_room_break</timeline>
   </timelines>
   <rooms name="rooms">
-    <room>rooms\r_test_room</room>
     <room>rooms\r_tutorial</room>
     <room>rooms\r_1_hallway</room>
     <room>rooms\r_2_chokepoint</room>
@@ -79,6 +84,8 @@
     <room>rooms\r_4_alert</room>
     <room>rooms\r_5_tandem</room>
     <room>rooms\r_6_message</room>
+    <room>rooms\r_7_test</room>
+    <room>rooms\r_8_escape</room>
     <room>rooms\r_victory</room>
   </rooms>
   <help>
