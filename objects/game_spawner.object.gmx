@@ -64,6 +64,7 @@ case r_8_escape:
     
     to_create_wave[3] = 0
     to_create_rifle_wave[3] = 0
+    
     reload_time *= 3/2
     break
 default:

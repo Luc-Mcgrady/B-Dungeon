@@ -77,16 +77,16 @@
     <timeline>timelines\til_room_break</timeline>
   </timelines>
   <rooms name="rooms">
+    <room>rooms\r_2_chokepoint</room>
+    <room>rooms\r_victory</room>
     <room>rooms\r_tutorial</room>
     <room>rooms\r_1_hallway</room>
-    <room>rooms\r_2_chokepoint</room>
     <room>rooms\r_3_rifle</room>
     <room>rooms\r_4_alert</room>
     <room>rooms\r_5_tandem</room>
     <room>rooms\r_6_message</room>
     <room>rooms\r_7_test</room>
     <room>rooms\r_8_escape</room>
-    <room>rooms\r_victory</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

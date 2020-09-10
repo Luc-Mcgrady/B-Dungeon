@@ -14,8 +14,3 @@ if enemy_number() <= 1
                 }
         }
         
-            
-
-
-
-//   

@@ -8,7 +8,7 @@ A user controlled player ✔️
 
 2 x enemies (must be different) ✔️
 
-health and score points for the main character (this must be drawn on the levels) 
+health and score points for the main character (this must be drawn on the levels) ✔️
 
 collectibles- score, health, power up, key to unlock a goal
 
