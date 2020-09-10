@@ -12,7 +12,6 @@
     <sprite>sprites\s_colour_white</sprite>
     <sprite>sprites\s_colour_gold</sprite>
     <sprite>sprites\s_bullet</sprite>
-    <sprite>sprites\s_debug_wall</sprite>
     <sprite>sprites\s_debug_target</sprite>
     <sprites name="Player">
       <sprite>sprites\s_player_top</sprite>
@@ -22,10 +21,14 @@
     <sprites name="Buttons">
       <sprite>sprites\s_btn_restart</sprite>
       <sprite>sprites\s_btn_play</sprite>
+      <sprite>sprites\s_btn_level_select</sprite>
+      <sprite>sprites\s_btn_arrow</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_victory</background>
+    <background>background\bg_level_select</background>
+    <background>background\bg_menu</background>
   </backgrounds>
   <paths name="paths">
     <paths name="r_7_test">
@@ -51,6 +54,8 @@
     <script>scripts\tutorial_change_text.gml</script>
     <script>scripts\enemy_number.gml</script>
     <script>scripts\victory_check.gml</script>
+    <script>scripts\level_select_increment.gml</script>
+    <script>scripts\calm_music_room_check.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\font_hints</font>
@@ -73,11 +78,17 @@
       <object>objects\game_persistant</object>
       <object>objects\game_music</object>
       <object>objects\game_menu</object>
+      <object>objects\game_level_select</object>
     </objects>
     <objects name="button">
       <object>objects\o_btn_play</object>
       <object>objects\o_btn_restart</object>
       <object>objects\o_btn_restart_full</object>
+      <object>objects\o_btn_go_level_select</object>
+      <objects name="level_select">
+        <object>objects\o_btn_level_select_pick</object>
+        <object>objects\o_btn_level_select_go</object>
+      </objects>
     </objects>
   </objects>
   <timelines name="timelines">
@@ -86,6 +97,7 @@
   </timelines>
   <rooms name="rooms">
     <room>rooms\r_menu</room>
+    <room>rooms\r_level_select</room>
     <room>rooms\r_tutorial</room>
     <room>rooms\r_1_hallway</room>
     <room>rooms\r_2_chokepoint</room>

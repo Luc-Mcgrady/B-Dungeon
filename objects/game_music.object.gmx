@@ -58,7 +58,7 @@ audio_pause_sound(snd_Higher_Octane)
     audio_pause_sound(snd_Higher_Octane)
     audio_resume_sound(snd_No_7_AloneWMT)
     
-} else if post_game and instance_number(o_gate) &gt; 0 and room != r_tutorial{
+} else if post_game and instance_number(o_gate) &gt; 0 and not calm_music_room_check(){
 
     post_game = false
     audio_pause_sound(snd_No_7_AloneWMT)
