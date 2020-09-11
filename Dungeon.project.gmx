@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\snd_Higher_Octane</sound>
     <sound>sound\snd_No_7_AloneWMT</sound>
+    <sound>sound\snd_i_vow_to_thee</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\s_colour_white</sprite>
@@ -23,6 +24,10 @@
       <sprite>sprites\s_btn_play</sprite>
       <sprite>sprites\s_btn_level_select</sprite>
       <sprite>sprites\s_btn_arrow</sprite>
+    </sprites>
+    <sprites name="checkboxing">
+      <sprite>sprites\s_powerup</sprite>
+      <sprite>sprites\s_coin</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -90,6 +95,11 @@
         <object>objects\o_btn_level_select_go</object>
       </objects>
     </objects>
+    <objects name="checkboxing">
+      <object>objects\o_health</object>
+      <object>objects\o_score</object>
+      <object>objects\o_powerup</object>
+    </objects>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\til_tutorial</timeline>
@@ -98,6 +108,7 @@
   <rooms name="rooms">
     <room>rooms\r_menu</room>
     <room>rooms\r_level_select</room>
+    <room>rooms\r_checkboxing</room>
     <room>rooms\r_tutorial</room>
     <room>rooms\r_1_hallway</room>
     <room>rooms\r_2_chokepoint</room>
